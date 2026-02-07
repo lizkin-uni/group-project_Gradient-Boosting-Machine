@@ -62,3 +62,13 @@ print_metrics("Baseline_Metrics_Train", y_train, y_train_pred, y_train_proba)
 y_val_pred = baseline.predict(X_val)
 y_val_proba = baseline.predict_proba(X_val)[:, 1]
 print_metrics("Baseline_Metrics_Validation", y_val, y_val_pred, y_val_proba)
+
+#combine x and y for saving
+train_df = pd.concat([X_train, y_train], axis=1)
+val_df = pd.concat([X_val, y_val], axis=1)
+test_df = pd.concat([X_test, y_test], axis=1)
+
+#convert the data to csv
+train_df.to_csv("train.csv", index=False)
+val_df.to_csv("val.csv", index=False)
+test_df.to_csv("test.csv", index=False)
