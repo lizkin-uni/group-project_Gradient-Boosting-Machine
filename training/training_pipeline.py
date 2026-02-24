@@ -13,7 +13,7 @@ from sklearn.utils.validation import check_is_fitted
 BUCKET_NAME = "gradient_boosting_machine"
 TRAIN_PATH = "inputs/train.csv"
 VAL_PATH = "inputs/val.csv"
-MODEL_OUTPUT_PATH = "pipeline_artifacts/pipeline_churn_model.pkl"
+MODEL_OUTPUT_PATH = "pipeline_artifacts/churn_model.pkl"
 
 
 class ChurnModel(BaseEstimator, ClassifierMixin):
